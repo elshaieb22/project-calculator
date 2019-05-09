@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Project Classic Calculator</title>
+    <link rel="icon" href="cal.png" />
+    <link rel="stylesheet" href="css/tailwind.min.css" />
+    <link rel="stylesheet" href="css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+</head>
+
+<body class="font-sans bg-grey-lightest">
+    <div class="container w-2/5 mx-auto my-8">
+        <div class="structure w-full px-4 bg-yellow-light shadow-lg rounded-t-lg">
+            <div class="w-full bg-grey-darker px-4 border-8 border-t-0 border-grey rounded-b-lg  shadow-md">
+                <section class="flex flex-wrap pt-8 pb-4 shadow-lg">
+                    <div class="w-5/6 text-black">
+                        <header>
+                            <h1>ProjectCalc<sup>&#64;</sup> Classic</h1>
+                        </header>
+                        <p class="text-2xl font-medium pt-4">MODEL 8547</p>
+                    </div>
+                    <div class="w-1/6">
+                        <i class="power fas fa-calculator fa-5x text-black"></i>
+                    </div>
+                </section>
+                <section class="pb-4">
+                    <div id="screen" class="data border-4 border-grey bg-grey-dark p-4 rounded-lg">
+                        <span id="data" class="text-black text-4xl font-sans font-semibold block">0</span>
+                        <span id="result" class="text-black text-5xl font-sans font-semibold block invisible">
+                            <i class="fas fa-equals"></i>
+                            <span>0</span>    
+                        </span>
+                    </div>
+                </section>
+            </div>
+
+            <div class="reset flex pt-2">
+                <span class="pr-2 text-normal">RESET</span>
+                <div class="w-4 h-4 rounded-full bg-black"></div>
+            </div>
+
+            <section class="btns flex flex-wrap -mx-2 py-4">
+                <!-- First Row -->
+                <div class="w-1/5 px-2 mb-4">
+                    <div id="yard" class="bg-grey-dark rounded-lg hover:bg-grey-light py-4 text-center border-b-4 border-grey-darker hover:border-grey cursor-pointer shadow-lg">
+                        <button class="text-grey-darkest text-3xl font-bold">Yds</button>
+                    </div>
+                </div>
+                <div id="feet" class="w-1/5 px-2 mb-4">
+                    <div class="bg-grey-dark rounded-lg hover:bg-grey-light py-4 text-center border-b-4 border-grey-darker hover:border-grey cursor-pointer shadow-lg text-grey-darkest text-3xl font-bold">
+                        <button class="text-grey-darkest text-3xl font-bold">Feet</button>
+                    </div>
+                </div>
+                <div class="w-1/5 px-2 mb-4">
+                    <div id="inch" class="bg-grey-dark rounded-lg hover:bg-grey-light py-4 text-center border-b-4 border-grey-darker hover:border-grey cursor-pointer shadow-lg">
+                        <button class="text-grey-darkest text-3xl font-bold">Inch</button>
+                    </div>
+                </div>
+                <div class="w-1/5 px-2 mb-4">
+                    <div class="bg-grey-dark rounded-lg hover:bg-grey-light py-4 text-center border-b-4 border-grey-darker hover:border-grey cursor-pointer shadow-lg">
+                        <button class="text-grey-darkest text-3xl font-bold">/</button>
+                    </div>
+                </div>
+                <div class="w-1/5 px-2 mb-4">
+                    <div id="cm" class="bg-grey-dark rounded-lg hover:bg-grey-light py-4 text-center border-b-4 border-grey-darker hover:border-grey cursor-pointer shadow-lg">
+                        <button class="text-grey-darkest text-3xl font-bold">cm</button>
+                    </div>
+                </div>
+                <!-- First Row -->
+
+                <!-- Second Row -->
+                <div class="w-1/5 px-2 mb-4">
+                    <div class="bg-black rounded-lg hover:bg-grey-darkest py-4 text-center border-b-4 border-grey-darker hover:border-grey cursor-pointer shadow-lg">
+                        <button class="text-grey-light text-3xl font-semibold">Conv</button>
+                    </div>
+                </div>
+                <div class="w-1/5 px-2 mb-4">
+                    <div class="calc-btn bg-grey-light rounded-lg hover:bg-grey-light py-4 text-center border-b-4 border-grey-darker hover:border-grey cursor-pointer shadow-lg" data-role='number' data-val='7'>
+                        <button class="text-grey-darkest text-3xl font-bold">7</button>
+                    </div>
+                </div>
+                <div class="w-1/5 px-2 mb-4">
+                    <div class="calc-btn bg-grey-light rounded-lg hover:bg-grey-light py-4 text-center border-b-4 border-grey-darker hover:border-grey cursor-pointer shadow-lg" data-role='number' data-val='8'>
+                        <button class="text-grey-darkest text-3xl font-bold">8</button>
+                    </div>
+                </div>
+                <div class="w-1/5 px-2 mb-4">
+                    <div class="calc-btn bg-grey-light rounded-lg hover:bg-grey-light py-4 text-center border-b-4 border-grey-darker hover:border-grey cursor-pointer shadow-lg" data-role='number' data-val='9'>
+                        <button class="text-grey-darkest text-3xl font-bold">9</button>
+                    </div>
+                </div>
+                <div class="w-1/5 px-2 mb-4">
+                    <div class="calc-btn bg-grey-dark rounded-lg hover:bg-grey-light py-4 text-center border-b-4 border-grey-darker hover:border-grey cursor-pointer shadow-lg" data-role='operator' data-sign='/'>
+                        <button class="text-grey-darkest text-3xl"><i class="fas fa-divide"></i></button>
+                    </div>
+                </div>
+                <!-- Second Row -->
+
+                <!-- Third Row -->
+                <div class="w-1/5 px-2 mb-4">
+                    <div id="percentage" class="bg-grey-dark rounded-lg hover:bg-grey-light py-4 text-center border-b-4 border-grey-darker hover:border-grey cursor-pointer shadow-lg">
+                        <button class="text-grey-darkest text-3xl"><i class="fas fa-percentage"></i></button>
+                    </div>
+                </div>
+                <div class="w-1/5 px-2 mb-4">
+                    <div class="calc-btn bg-grey-light rounded-lg hover:bg-grey-light py-4 text-center border-b-4 border-grey-darker hover:border-grey cursor-pointer shadow-lg" data-role='number' data-val='4'>
+                        <button class="text-grey-darkest text-3xl font-bold">4</button>
+                    </div>
+                </div>
+                <div class="w-1/5 px-2 mb-4">
+                    <div class="calc-btn bg-grey-light rounded-lg hover:bg-grey-light py-4 text-center border-b-4 border-grey-darker hover:border-grey cursor-pointer shadow-lg" data-role='number' data-val='5'>
+                        <button class="text-grey-darkest text-3xl font-bold">5</button>
+                    </div>
+                </div>
+                <div class="w-1/5 px-2 mb-4">
+                    <div class="calc-btn bg-grey-light rounded-lg hover:bg-grey-light py-4 text-center border-b-4 border-grey-darker hover:border-grey cursor-pointer shadow-lg" data-role='number' data-val='6'>
+                        <button class="text-grey-darkest text-3xl font-bold">6</button>
+                    </div>
+                </div>
+                <div class="w-1/5 px-2 mb-4">
+                    <div class="calc-btn bg-grey-dark rounded-lg hover:bg-grey-light py-4 text-center border-b-4 border-grey-darker hover:border-grey cursor-pointer" data-role='operator' data-sign='*'>
+                        <button class="text-grey-darkest text-3xl"><i class="fas fa-times"></i></button>
+                    </div>
+                </div>
+                <!-- Third Row -->
+
+                <!-- Forth Row -->
+                <div class="w-1/5 px-2 mb-4">
+                    <div id="off" class="bg-grey-dark rounded-lg hover:bg-red-light py-4 text-center border-b-4 border-grey-darker hover:border-red cursor-pointer shadow-lg">
+                        <button class="text-grey-darkest text-3xl font-bold">off</button>
+                    </div>
+                </div>
+                <div class="w-1/5 px-2 mb-4">
+                    <div class="calc-btn bg-grey-light rounded-lg hover:bg-grey-light py-4 text-center border-b-4 border-grey-darker hover:border-grey cursor-pointer shadow-lg" data-role='number' data-val='1'>
+                        <button class="text-grey-darkest text-3xl font-bold">1</button>
+                    </div>
+                </div>
+                <div class="w-1/5 px-2 mb-4">
+                    <div class="calc-btn bg-grey-light rounded-lg hover:bg-grey-light py-4 text-center border-b-4 border-grey-darker hover:border-grey cursor-pointer shadow-lg" data-role='number' data-val='2'>
+                        <button class="text-grey-darkest text-3xl font-bold">2</button>
+                    </div>
+                </div>
+                <div class="w-1/5 px-2 mb-4">
+                    <div class="calc-btn bg-grey-light rounded-lg hover:bg-grey-light py-4 text-center border-b-4 border-grey-darker hover:border-grey cursor-pointer shadow-lg" data-role='number' data-val='3'>
+                        <button class="text-grey-darkest text-3xl font-bold">3</button>
+                    </div>
+                </div>
+                <div class="w-1/5 px-2 mb-4">
+                    <div class="calc-btn bg-grey-dark rounded-lg hover:bg-grey-light py-4 text-center border-b-4 border-grey-darker hover:border-grey cursor-pointer shadow-lg" data-role='operator' data-sign='-'>
+                        <button class="text-grey-darkest text-3xl"><i class="fas fa-minus"></i></button>
+                    </div>
+                </div>
+                <!-- Forth Row -->
+
+                <!-- Fivth Row -->
+                <div class="w-1/5 px-2 mb-4">
+                    <div id="on" class="bg-green rounded-lg hover:bg-green-light py-4 text-center border-b-4 border-green-darker hover:border-green cursor-pointer shadow-lg">
+                        <button class="text-grey-light text-3xl font-bold">on/C</button>
+                    </div>
+                </div>
+                <div class="w-1/5 px-2 mb-4">
+                    <div class="calc-btn bg-grey-light rounded-lg hover:bg-grey-light py-4 text-center border-b-4 border-grey-darker hover:border-grey cursor-pointer shadow-lg" data-role='number' data-val='0'>
+                        <button class="text-grey-darkest text-3xl font-bold">0</button>
+                    </div>
+                </div>
+                <div class="w-1/5 px-2 mb-4">
+                    <div class="calc-btn bg-grey-light rounded-lg hover:bg-grey-light py-4 text-center border-b-4 border-grey-darker hover:border-grey cursor-pointer shadow-lg" data-role='number' data-val='.'>
+                        <button class="text-grey-darkest text-3xl font-black">.</button>
+                    </div>
+                </div>
+                <div class="w-1/5 px-2 mb-4">
+                    <div class="result bg-grey-dark rounded-lg hover:bg-grey-light py-4 text-center border-b-4 border-grey-darker hover:border-grey cursor-pointer shadow-lg">
+                        <button class="text-grey-darkest text-3xl"><i class="fas fa-equals"></i></button>
+                    </div>
+                </div>
+                <div class="w-1/5 px-2 mb-4">
+                    <div class="calc-btn bg-grey-dark rounded-lg hover:bg-grey-light py-4 text-center border-b-4 border-grey-darker hover:border-grey cursor-pointer shadow-lg" data-role='operator' data-sign='+'>
+                        <button class="text-grey-darkest text-3xl"><i class="fas fa-plus"></i></button>
+                    </div>
+                </div>
+                <!-- fivth Row -->
+            </section>
+        </div>
+    </div>
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/coding.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+@font-face {
+    font-family: digit;
+    src: url(../fonts/digit/digital-7.ttf);
+}
+
+
+header {
+    position: relative
+}
+
+h1::before {
+    content: '';
+    position: absolute;
+    bottom: -9.021px;
+    left: 0;
+    width: 90%;
+    height: 2.021px;
+    background-color: #FFF382;
+}
+
+button {
+    position: relative;
+    z-index: 0
+}
+
+.structure {
+    border-bottom-left-radius: 3rem;
+    border-bottom-right-radius: 3rem
+}
+
+.power {
+    transition: all .3s linear
+}
+
+#data,
+#result {
+    font-family: digit
+}
